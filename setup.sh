@@ -216,12 +216,12 @@ conn roadwarrior
   leftid=@${VPNHOST}
   leftcert=cert.pem
   leftsendcert=always
-  leftsubnet=0.0.0.0/0
+  leftsubnet=172.31.0.0/16,10.10.0.0/16,10.20.0.0/16
   right=%any
   rightid=%any
   rightauth=eap-mschapv2
   eap_identity=%any
-  rightdns=8.8.8.8,8.8.4.4
+  rightdns=172.31.0.2,10.0.0.2,10.20.0.2,114.114.114.114
   rightsourceip=${VPNIPPOOL}
   rightsendcert=never
 " > /etc/ipsec.conf
